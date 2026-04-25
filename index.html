@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tea Farm Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>🌿 Roseline Tea Farming Tracker</h1>
+
+  <div class="form">
+    <input type="text" id="farmer" placeholder="Farmer Name">
+    <input type="number" id="kg" placeholder="KG Delivered">
+    <button onclick="addRecord()">Add Record</button>
+  </div>
+
+  <input type="text" id="search" placeholder="Search farmer..." onkeyup="searchData()">
+
+  <h2>📊 Daily Records</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Farmer</th>
+        <th>KG</th>
+      </tr>
+    </thead>
+    <tbody id="records"></tbody>
+  </table>
+
+  <h2>💰 Monthly Summary (KES 7/KG)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Farmer</th>
+        <th>Total KG</th>
+        <th>Payment (KES)</th>
+      </tr>
+    </thead>
+    <tbody id="summary"></tbody>
+  </table>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
